@@ -3,4 +3,5 @@
 
 int determinant() {
 
+    return 0;
 }
