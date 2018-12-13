@@ -2,6 +2,6 @@
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-void readMatrix(int *matrixPtr, int size);
+void readMatrix(int **matrixPtr, int size);
 
 #endif

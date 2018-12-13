@@ -5,32 +5,33 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void validateSize(int size);
+int validateSize(int size);
+void readMatrix(int *matrixPtr, int size);
 
 int main() {
-    int size;
-//    int *ptrMatrix = nullptr;
+    int size{};
+    int **ptrMatrix = nullptr;
 
     cout << "Pick 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
          << "3. Matrix of size 3 x 3" << endl
          << "Enter: ";
     cin >> size;
-    validateSize(size);
+    size = validateSize(size);
     cout << "\nYou have chosen a matrix of size " << size << endl;
 
-//    int *ptrMatrix = new int[3];      // allocate pointer to array
-
-//    readMatrix();
-//        ptrMatrix = new int[size];
-
+    ptrMatrix = new int*[size];      // allocate pointer to array
+    readMatrix(ptrMatrix, size);        // send to readMatrix function
 
     return 0;
 }
 
-void validateSize(int size) {
+int validateSize(int size) {
+    int updateSize;
     while(size != 2 && size != 3) {
-        cout << "\nYou must choose between 2 or 3: " << endl;
+        cout << "You must choose between 2 or 3: " << endl;
         cin >> size;
     }
+    updateSize = size;
+    return updateSize;
 }
