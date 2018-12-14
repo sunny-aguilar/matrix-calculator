@@ -8,7 +8,7 @@ using std::endl;
 void readMatrix(int **matrixPtr, int size) {
     if (size == 2) {
         int row, col;
-        cout << "Please enter 4 numbers" << endl;
+        cout << "Please enter 4 numbers: " << endl;
 
         for (row = 0; row < size; row++) {
             for (col = 0; col < size; col++) {
@@ -19,10 +19,11 @@ void readMatrix(int **matrixPtr, int size) {
                 }
             }
         }
+//        cout << matrixPtr[0] << endl;
     }
     else if (size == 3) {
         int row, col;
-        cout << "Please enter 9 numbers" << endl;
+        cout << "Please enter 9 numbers: " << endl;
         for (row = 0; row < size; row++) {
             for (col = 0; col < size; col++) {
                 cin >> matrixPtr[col][col];
