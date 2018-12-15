@@ -40,11 +40,12 @@ int main() {
 **                  here
 *********************************************************************/
 int validateSize(int size) {
-    int updateSize;
-    while(size != 2 && size != 3) {
-        cout << "You must choose between sizes 2 or 3: " << endl;
+    while (!cin || (size != 2 && size != 3)) {
+        cout << "You must enter 2 or 3: ";
+        cin.clear();
+        cin.ignore();
         cin >> size;
     }
-    updateSize = size;
-    return updateSize;
+
+    return size;
 }

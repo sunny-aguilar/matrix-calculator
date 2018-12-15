@@ -12,6 +12,4 @@
 int determinant(int **matrixPtr, int size);
 
 
-
-
 #endif
