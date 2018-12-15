@@ -1,4 +1,11 @@
-//
+/*********************************************************************
+** Author:      Sandro Aguilar
+** Date:        Jan 2019
+** Description: Project 8.a Void function smallSort2 takes as parameters
+**              three int variable addresses and then sorts them in
+**              ascending order
+**
+*********************************************************************/
 #include "matrix.hpp"
 #include <iostream>
 using std::cin;
@@ -16,7 +23,7 @@ void readMatrix(int **matrixPtr, int size) {
             for(int j = 0; j < size; ++j) {
                 cout << "Enter a Number: ";
                 cin >> matrixPtr[i][j];
-                while(matrixPtr[i][j] < 0 || matrixPtr[i][j] > 9) {
+                while(matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9) {
                     cout << "Error! Enter an integer between 0 and 9: ";
                     cin >> matrixPtr[i][j];
                 }
@@ -36,7 +43,7 @@ void readMatrix(int **matrixPtr, int size) {
             for(int j = 0; j < size; ++j) {
                 cout << "Enter a Number: ";
                 cin >> matrixPtr[i][j];
-                while(matrixPtr[i][j] < 0 || matrixPtr[i][j] > 9) {
+                while(matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9) {
                     cout << "Error! Enter an integer between 0 and 9: ";
                     cin >> matrixPtr[i][j];
                 }

@@ -29,12 +29,16 @@ int main() {
 
     ptrMatrix = new int*[size];         // allocate pointer to array
     readMatrix(ptrMatrix, size);        // send to readMatrix function
-    determinant(ptrMatrix, size);
+    cout << "Determinant is: " << determinant(ptrMatrix, size);
 
 
     return 0;
 }
 
+/*********************************************************************
+** Description:     Write description
+**                  here
+*********************************************************************/
 int validateSize(int size) {
     int updateSize;
     while(size != 2 && size != 3) {
