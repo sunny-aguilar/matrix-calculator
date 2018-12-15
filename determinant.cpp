@@ -45,7 +45,7 @@ int determinant(int **matrixPtr, int size) {
         i = matrixPtr[2][2];
 
         // calculate determinant |A| = a(ei − fh) − b(di − fg) + c(dh − eg)
-        // 6114-25287 test numbers
+        // 6114-25287 test numbers with determinant answer 306
         determinant = a*((e*i) - (f*h)) -
                       b*((d*i) - (f*g)) +
                       c*((d*h) - (e*g));

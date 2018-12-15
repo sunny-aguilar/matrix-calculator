@@ -9,9 +9,11 @@
 #include "matrix.hpp"
 #include "determinant.hpp"
 #include <iostream>
+#include <string>
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
 
 int validateSize(int size);                     // validates menu choice
 
@@ -42,8 +44,8 @@ int main() {
 int validateSize(int size) {
     while (!cin || (size != 2 && size != 3)) {
         cout << "You must enter 2 or 3: ";
-        cin.clear();
-        cin.ignore();
+        cin.clear();            // remove any errors in the buffer
+        cin.ignore();           // remove first character in buffer
         cin >> size;
     }
 

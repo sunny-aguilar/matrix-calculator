@@ -22,8 +22,10 @@ void readMatrix(int **matrixPtr, int size) {
             for(int j = 0; j < size; ++j) {
                 cout << "Enter a Number: ";
                 cin >> matrixPtr[i][j];
-                while(matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9) {
+                while(!cin || (matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9)) {
                     cout << "Error! Enter an integer between 0 and 9: ";
+                    cin.clear();
+                    cin.ignore();
                     cin >> matrixPtr[i][j];
                 }
             }
@@ -42,8 +44,10 @@ void readMatrix(int **matrixPtr, int size) {
             for(int j = 0; j < size; ++j) {
                 cout << "Enter a Number: ";
                 cin >> matrixPtr[i][j];
-                while(matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9) {
+                while(!cin || (matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9)) {
                     cout << "Error! Enter an integer between 0 and 9: ";
+                    cin.clear();
+                    cin.ignore();
                     cin >> matrixPtr[i][j];
                 }
             }
