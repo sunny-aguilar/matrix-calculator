@@ -23,7 +23,7 @@ int determinant(int **matrixPtr, int size) {
     int determinant = 0, a, b, c, d, e, f, g, h, i;
 
     if (size == 2) {
-        // array values
+        // formula values from array
         a = matrixPtr[0][0];
         b = matrixPtr[0][1];
         c = matrixPtr[1][0];
@@ -33,7 +33,7 @@ int determinant(int **matrixPtr, int size) {
         determinant = (a*d) - (b*c);
     }
     else if (size == 3) {
-        // array values
+        // formula values from array
         a = matrixPtr[0][0];
         b = matrixPtr[0][1];
         c = matrixPtr[0][2];
