@@ -29,8 +29,8 @@ int determinant(int **matrixPtr, int size) {
         // array values
         a = matrixPtr[0][0];
         b = matrixPtr[0][1];
-        c = matrixPtr[1][0];
-        d = matrixPtr[1][1];
+        c = matrixPtr[0][2];
+        d = matrixPtr[1][0];
         e = matrixPtr[1][1];
         f = matrixPtr[1][2];
         g = matrixPtr[2][0];
@@ -38,6 +38,7 @@ int determinant(int **matrixPtr, int size) {
         i = matrixPtr[2][2];
 
         // calculate determinant |A| = a(ei − fh) − b(di − fg) + c(dh − eg)
+        // 6114-25287 test numbers
         determinant = a*((e*i) - (f*h)) -
                       b*((d*i) - (f*g)) +
                       c*((d*h) - (e*g));
