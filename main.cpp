@@ -14,7 +14,6 @@ using std::cin;
 using std::endl;
 
 int validateSize(int size);                     // validates menu choice
-void readMatrix(int *matrixPtr, int size);
 
 int main() {
     int size{};
@@ -28,8 +27,10 @@ int main() {
     size = validateSize(size);
     cout << "\nYou have chosen a matrix of size " << size << endl;
 
-    ptrMatrix = new int*[size];      // allocate pointer to array
+    ptrMatrix = new int*[size];         // allocate pointer to array
     readMatrix(ptrMatrix, size);        // send to readMatrix function
+//    determinant(ptrMatrix, size);
+
 
     return 0;
 }
