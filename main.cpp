@@ -35,7 +35,7 @@ int main() {
 
     // delete dynamically allocated pointers
     for (int i = 0; i < size; i++) {
-        
+        delete [] ptrMatrix[i];
     }
 
     return 0;
