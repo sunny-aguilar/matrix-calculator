@@ -6,34 +6,47 @@ using std::cout;
 using std::endl;
 
 void readMatrix(int **matrixPtr, int size) {
-    if (size == 2) {
-        int row, col;
-        cout << "Please enter 4 numbers: " << endl;
+    if (size == 2) {                                // initialize a size 2 matrix
+        // add an array to the array
+        for(int i = 0; i < size; ++i)
+            matrixPtr[i] = new int[size];
 
-        for (row = 0; row < size; row++) {
-            for (col = 0; col < size; col++) {
-                cin >> matrixPtr[row][col];
-                while ( matrixPtr[row][col] < 0 || matrixPtr[row][col] > 9) {
-                    cout << "Please enter an integer between 0 and 9\n" << endl;
-                    cin >> matrixPtr[row][col];
+        cout << "Now, enter 4 integers sizes 0 - 9.\n";
+        for(int i = 0; i < size; ++i) {
+            for(int j = 0; j < size; ++j) {
+                cout << "Enter a Number: ";
+                cin >> matrixPtr[i][j];
+                while(matrixPtr[i][j] < 0 || matrixPtr[i][j] > 9) {
+                    cout << "Error! Enter an integer between 0 and 9: ";
+                    cin >> matrixPtr[i][j];
                 }
             }
         }
-//        cout << matrixPtr[0] << endl;
+        cout << "You entered the numbers ";
+        for(int i = 0; i < size; ++i)
+            for(int j = 0; j < size; ++j)
+                cout << matrixPtr[i][j] << " ";
     }
-    else if (size == 3) {
-        int row, col;
-        cout << "Please enter 9 numbers: " << endl;
-        for (row = 0; row < size; row++) {
-            for (col = 0; col < size; col++) {
-                cin >> matrixPtr[col][col];
+    else if (size == 3) {                           // initialize a size 3 matrix
+        for(int i = 0; i < size; ++i)
+            matrixPtr[i] = new int[size];
+
+        cout << "Now, enter 9 integers sizes 0 - 9.\n";
+        for(int i = 0; i < size; ++i) {
+            for(int j = 0; j < size; ++j) {
+                cout << "Enter a Number: ";
+                cin >> matrixPtr[i][j];
+                while(matrixPtr[i][j] < 0 || matrixPtr[i][j] > 9) {
+                    cout << "Error! Enter an integer between 0 and 9: ";
+                    cin >> matrixPtr[i][j];
+                }
             }
         }
+        cout << "You entered the numbers ";
+        for(int i = 0; i < size; ++i)
+            for(int j = 0; j < size; ++j)
+                cout << matrixPtr[i][j] << " ";
     }
-
-    // display array contents to test data here
-    // use for loop like above to step through it
-
 }
 
 //// initializing a 2-d array size 2

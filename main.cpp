@@ -1,3 +1,11 @@
+/*********************************************************************
+** Author:      Sandro Aguilar
+** Date:        Jan 2019
+** Description: Project 8.a Void function smallSort2 takes as parameters
+**              three int variable addresses and then sorts them in
+**              ascending order
+**
+*********************************************************************/
 #include "matrix.hpp"
 #include "determinant.hpp"
 #include <iostream>
@@ -5,7 +13,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int validateSize(int size);
+int validateSize(int size);                     // validates menu choice
 void readMatrix(int *matrixPtr, int size);
 
 int main() {
@@ -29,7 +37,7 @@ int main() {
 int validateSize(int size) {
     int updateSize;
     while(size != 2 && size != 3) {
-        cout << "You must choose between 2 or 3: " << endl;
+        cout << "You must choose between sizes 2 or 3: " << endl;
         cin >> size;
     }
     updateSize = size;
