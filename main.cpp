@@ -29,7 +29,7 @@ int main() {
 
     ptrMatrix = new int*[size];         // allocate pointer to array
     readMatrix(ptrMatrix, size);        // send to readMatrix function
-//    determinant(ptrMatrix, size);
+    determinant(ptrMatrix, size);
 
 
     return 0;
