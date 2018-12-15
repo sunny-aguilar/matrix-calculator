@@ -33,6 +33,10 @@ int main() {
     readMatrix(ptrMatrix, size);        // send to readMatrix function
     cout << "Determinant is: " << determinant(ptrMatrix, size);
 
+    // delete dynamically allocated pointers
+    for (int i = 0; i < size; i++) {
+        
+    }
 
     return 0;
 }
