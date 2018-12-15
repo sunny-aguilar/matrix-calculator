@@ -1,12 +1,11 @@
 /*********************************************************************
 ** Author:      Sandro Aguilar
 ** Date:        Jan 2019
-** Description: Project 8.a Void function smallSort2 takes as parameters
-**              three int variable addresses and then sorts them in
-**              ascending order
+** Description: Write a short description
+**              of your code
+**              here.
 **
-*********************************************************************/
-#include "matrix.hpp"
+*********************************************************************/#include "matrix.hpp"
 #include <iostream>
 using std::cin;
 using std::cout;

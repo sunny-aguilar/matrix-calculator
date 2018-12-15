@@ -1,4 +1,11 @@
-//
+/*********************************************************************
+** Author:      Sandro Aguilar
+** Date:        Jan 2019
+** Description: Write a short description
+**              of your code
+**              here.
+**
+*********************************************************************/
 #include "determinant.hpp"
 #include <iostream>
 using std::cout;
