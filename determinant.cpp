@@ -22,8 +22,8 @@ int determinant(int **matrixPtr, int size) {
         c = matrixPtr[1][0];
         d = matrixPtr[1][1];
 
-        // calculate determinant |A| = ad - bc
-        // for size 2 matrix
+        // calculate determinant for size 2 matrix
+        // |A| = ad - bc
         determinant = (a*d) - (b*c);
     }
     else if (size == 3) {
@@ -38,8 +38,8 @@ int determinant(int **matrixPtr, int size) {
         h = matrixPtr[2][1];
         i = matrixPtr[2][2];
 
-        // calculate determinant |A| = a(ei − fh) − b(di − fg) + c(dh − eg)
-        // for size 3 matrix
+        // calculate determinant for size 3 matrix
+        // |A| = a(ei − fh) − b(di − fg) + c(dh − eg)
         determinant = a*((e*i) - (f*h)) -
                       b*((d*i) - (f*g)) +
                       c*((d*h) - (e*g));
