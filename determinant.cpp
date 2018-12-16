@@ -12,7 +12,7 @@ using std::cout;
 using std::endl;
 
 int determinant(int **matrixPtr, int size) {
-
+    // variables to hold user entered values
     int determinant = 0, a, b, c, d, e, f, g, h, i;
 
     if (size == 2) {
