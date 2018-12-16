@@ -22,7 +22,7 @@ int main() {
     cout << "Pick 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
          << "3. Matrix of size 3 x 3" << endl
-         << "Enter: ";
+         << "\nEnter: ";
     cin >> size;
     size = validateSize(size);
     cout << "\nYou have chosen a matrix of size " << size << endl;
