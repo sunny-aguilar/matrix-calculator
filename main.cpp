@@ -9,15 +9,19 @@
 #include "readMatrix.hpp"
 #include "determinant.hpp"
 #include <iostream>
+#include <regex>
 using std::cout;
 using std::cin;
 using std::endl;
+using std::regex;
 
 int validateSize(int size);                     // validates menu choice
 
 int main() {
     int size = 0;                               // holds matrix size
     int **ptrMatrix = nullptr;                  // pointer to a pointer
+
+    regex selectPattern("[2-3]{1}");
 
     // ask user to pick a matrix size
     cout << "Enter 2 or 3 to choose the size of the matrix:" << endl
