@@ -60,8 +60,8 @@ int main() {
 }
 
 /*********************************************************************
-** Description:     Write description
-**                  here
+** Description:     Simple validation function that validates user
+**                  data entry
 *********************************************************************/
 int validateSize(int size) {
     while (!cin || (size != 2 && size != 3)) {
