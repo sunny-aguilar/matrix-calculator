@@ -5,7 +5,8 @@
 **                  of your code
 **                  here.
 **
-*********************************************************************/#include "matrix.hpp"
+*********************************************************************/
+#include "matrix.hpp"
 #include <iostream>
 using std::cin;
 using std::cout;
