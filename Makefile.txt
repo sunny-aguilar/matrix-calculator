@@ -1,8 +1,8 @@
 # this target will compile all the files
-all: Calc
+all: calc
 
-Calc: main.o readMatrix.o determinant.o
-	g++ -std=c++0x main.cpp readMatrix.cpp determinant.cpp -o Calc
+calc: main.o readMatrix.o determinant.o
+	g++ -std=c++0x main.cpp readMatrix.cpp determinant.cpp -o calc
 
 main.0: main.cpp
 	g++ -std=c++0x main.cpp
