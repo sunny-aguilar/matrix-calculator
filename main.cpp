@@ -16,20 +16,25 @@ using std::endl;
 int validateSize(int size);                     // validates menu choice
 
 int main() {
-    int size = 0;
+    int size = 0;                               // holds matrix size
     int **ptrMatrix = nullptr;                  // pointer to a pointer
 
-    cout << "Pick 2 or 3 to choose the size of the matrix:" << endl
+    // ask user to pick a matrix size
+    cout << "Enter 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
          << "3. Matrix of size 3 x 3" << endl
          << "\nEnter: ";
     cin >> size;
+    // call function to validate size entered by user
     size = validateSize(size);
+    // confirm size with user after validation passes
     cout << "\nYou have chosen a matrix of size " << size << endl;
 
+    // create an array of pointers that point to arrays
     ptrMatrix = new int*[size];         // allocate pointer to array
-    readMatrix(ptrMatrix, size);        // send to readMatrix function
-    // display matrix
+    readMatrix(ptrMatrix, size);        // send pointer to readMatrix function
+
+    // display matrix values
     cout << "\nMatrix Numbers\n";
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
@@ -37,6 +42,7 @@ int main() {
         }
         cout << endl;
     }
+    // display the determinant value
     cout << "\nDeterminant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers
