@@ -6,8 +6,8 @@
 **                  here.
 **
 *********************************************************************/
-#ifndef MATRIX_HPP
-#define MATRIX_HPP
+#ifndef READMATRIX_HPP
+#define READMATRIX_HPP
 
 void readMatrix(int **matrixPtr, int size);
 

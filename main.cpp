@@ -6,14 +6,12 @@
 **                  here.
 **
 *********************************************************************/
-#include "matrix.hpp"
+#include "readMatrix.hpp"
 #include "determinant.hpp"
 #include <iostream>
-#include <string>
 using std::cout;
 using std::cin;
 using std::endl;
-using std::string;
 
 int validateSize(int size);                     // validates menu choice
 
@@ -31,6 +29,8 @@ int main() {
 
     ptrMatrix = new int*[size];         // allocate pointer to array
     readMatrix(ptrMatrix, size);        // send to readMatrix function
+    cout << "Matrix Numbers\n";
+//    cout <<
     cout << "Determinant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers

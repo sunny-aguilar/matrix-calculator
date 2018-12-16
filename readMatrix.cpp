@@ -6,7 +6,7 @@
 **                  here.
 **
 *********************************************************************/
-#include "matrix.hpp"
+#include "readMatrix.hpp"
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -32,31 +32,31 @@ void readMatrix(int **matrixPtr, int size) {
             }
         }
         cout << "You entered the numbers ";
-        for(int i = 0; i < size; ++i)
-            for(int j = 0; j < size; ++j)
-                cout << matrixPtr[i][j] << " ";
+        for(int row = 0; row < size; ++row)
+            for(int col = 0; col < size; ++col)
+                cout << matrixPtr[row][col] << " ";
     }
     else if (size == 3) {                           // initialize a size 3 matrix
         for(int i = 0; i < size; ++i)
             matrixPtr[i] = new int[size];
 
         cout << "Now, enter 9 integers sizes 0 - 9.\n";
-        for(int i = 0; i < size; ++i) {
-            for(int j = 0; j < size; ++j) {
+        for(int row = 0; row < size; ++row) {
+            for(int col = 0; col < size; ++col) {
                 cout << "Enter a Number: ";
-                cin >> matrixPtr[i][j];
-                while(!cin || (matrixPtr[i][j] < -9 || matrixPtr[i][j] > 9)) {
+                cin >> matrixPtr[row][col];
+                while(!cin || (matrixPtr[row][col] < -9 || matrixPtr[row][col] > 9)) {
                     cout << "Error! Enter an integer between 0 and 9: ";
                     cin.clear();
                     cin.ignore();
-                    cin >> matrixPtr[i][j];
+                    cin >> matrixPtr[row][col];
                 }
             }
         }
         cout << "You entered the numbers ";
-        for(int i = 0; i < size; ++i)
-            for(int j = 0; j < size; ++j)
-                cout << matrixPtr[i][j] << " ";
+        for(int row = 0; row < size; ++row)
+            for(int col = 0; col < size; ++col)
+                cout << matrixPtr[row][col] << " ";
     }
 }
 
