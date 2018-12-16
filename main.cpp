@@ -17,7 +17,7 @@ int validateSize(int size);                     // validates menu choice
 
 int main() {
     int size{};
-    int **ptrMatrix = nullptr;
+    int **ptrMatrix = nullptr;                  // pointer to a pointer
 
     cout << "Pick 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
@@ -40,9 +40,10 @@ int main() {
     cout << "\nDeterminant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers
-    for (int i = 0; i < size; i++) {
-        delete [] ptrMatrix[i];
+    for (int row = 0; row < size; row++) {
+        delete [] ptrMatrix[row];
     }
+    delete[] ptrMatrix;
 
     return 0;
 }
