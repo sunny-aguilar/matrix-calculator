@@ -1,2 +1,3 @@
 all:
 	g++ -std=c++0x main.cpp readMatrix.cpp determinant.cpp -o Calc
+compile:
