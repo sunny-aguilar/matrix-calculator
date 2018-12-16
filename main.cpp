@@ -33,11 +33,11 @@ int main() {
     cout << "\nMatrix Numbers\n";
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
-            cout << " " << ptrMatrix[row][col] << " ";
+            cout << "   " << ptrMatrix[row][col] << " ";
         }
         cout << endl;
     }
-    cout << "Determinant is: " << determinant(ptrMatrix, size);
+    cout << "\nDeterminant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers
     for (int i = 0; i < size; i++) {

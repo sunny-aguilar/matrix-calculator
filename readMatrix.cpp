@@ -31,10 +31,6 @@ void readMatrix(int **matrixPtr, int size) {
                 }
             }
         }
-        cout << "You entered the numbers ";
-        for(int row = 0; row < size; ++row)
-            for(int col = 0; col < size; ++col)
-                cout << matrixPtr[row][col] << " ";
     }
     else if (size == 3) {                           // initialize a size 3 matrix
         // dynamically add an array to the array
@@ -54,10 +50,6 @@ void readMatrix(int **matrixPtr, int size) {
                 }
             }
         }
-        cout << "You entered the numbers ";
-        for(int row = 0; row < size; ++row)
-            for(int col = 0; col < size; ++col)
-                cout << matrixPtr[row][col] << " ";
     }
 }
 
