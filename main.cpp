@@ -16,7 +16,7 @@ using std::endl;
 int validateSize(int size);                     // validates menu choice
 
 int main() {
-    int size{};
+    int size = 0;
     int **ptrMatrix = nullptr;                  // pointer to a pointer
 
     cout << "Pick 2 or 3 to choose the size of the matrix:" << endl
