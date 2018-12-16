@@ -43,7 +43,7 @@ int main() {
         cout << endl;
     }
     // display the determinant value
-    cout << "\nDeterminant is: " << determinant(ptrMatrix, size);
+    cout << "\nDeterminant is: " << determinant(ptrMatrix, size) << endl;
 
     // delete dynamically allocated pointers
     for (int arr = 0; arr < size; arr++) {
