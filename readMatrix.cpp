@@ -14,7 +14,7 @@ using std::endl;
 
 void readMatrix(int **matrixPtr, int size) {
     if (size == 2) {                                // initialize a size 2 matrix
-        // add an array to the array
+        // dynamically add an array to the array
         for(int i = 0; i < size; ++i)
             matrixPtr[i] = new int[size];
 
@@ -37,6 +37,7 @@ void readMatrix(int **matrixPtr, int size) {
                 cout << matrixPtr[row][col] << " ";
     }
     else if (size == 3) {                           // initialize a size 3 matrix
+        // dynamically add an array to the array
         for(int i = 0; i < size; ++i)
             matrixPtr[i] = new int[size];
 

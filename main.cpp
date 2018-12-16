@@ -29,8 +29,14 @@ int main() {
 
     ptrMatrix = new int*[size];         // allocate pointer to array
     readMatrix(ptrMatrix, size);        // send to readMatrix function
-    cout << "Matrix Numbers\n";
-//    cout <<
+    // display matrix
+    cout << "\nMatrix Numbers\n";
+    for (int row = 0; row < size; row++) {
+        for (int col = 0; col < size; col++) {
+            cout << " " << ptrMatrix[row][col] << " ";
+        }
+        cout << endl;
+    }
     cout << "Determinant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers
