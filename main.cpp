@@ -40,9 +40,10 @@ int main() {
     cout << "\nDeterminant is: " << determinant(ptrMatrix, size);
 
     // delete dynamically allocated pointers
-    for (int row = 0; row < size; row++) {
-        delete [] ptrMatrix[row];
+    for (int arr = 0; arr < size; arr++) {
+        delete [] ptrMatrix[arr];
     }
+    //Free the array of pointers
     delete[] ptrMatrix;
 
     return 0;
