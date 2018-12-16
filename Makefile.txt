@@ -5,13 +5,13 @@ Calc: main.o readMatrix.o determinant.o
 	g++ -std=c++0x main.cpp readMatrix.cpp determinant.cpp -o Calc
 
 main.0: main.cpp
-	g++ -c main.cpp
+	g++ -std=c++0x main.cpp
 
 readMatrix.o: readMatrix.cpp
-	g++ -c readMatrix.cpp
+	g++ -std=c++0x readMatrix.cpp
 
 determinant.o: determinant.cpp
-	g++ -c determinant.cpp
+	g++ -std=c++0x determinant.cpp
 
 clean:
 	rm -rf *o Calc
