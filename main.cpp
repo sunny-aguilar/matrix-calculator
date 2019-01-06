@@ -13,7 +13,7 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using std::regex;
+using std::regex;   // REMOVE REGEX
 
 int validateSize(int size);                     // validates menu choice
 
