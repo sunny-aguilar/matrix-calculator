@@ -54,6 +54,8 @@ int main() {
     }
     // Free the array of pointers
     delete [] ptrMatrix;
+
+    // set pointer to null
     ptrMatrix = nullptr;
 
     return 0;
