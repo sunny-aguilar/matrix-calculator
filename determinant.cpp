@@ -1,11 +1,9 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
-** Description:     A function that take a pointer to a 2-D array and
-**                  an int as parameters. The functions asks the user
-**                  to enter the values of the matrix and calculates
-**                  the determinant.
-**
+** Description:     A function that calculates the determinant of a
+**                  2x2 or 3x3 matrix calculator. Returns the
+**                  calculated value.
 *********************************************************************/
 #include "determinant.hpp"
 #include <iostream>
