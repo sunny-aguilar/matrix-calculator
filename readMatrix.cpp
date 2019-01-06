@@ -25,11 +25,12 @@ for(int i = 0; i < size; ++i)
             cout << "\nEnter a Number: ";
             cin >> matrixPtr[row][col];
 
+
             // validate input
             while(!cin || (matrixPtr[row][col] < -9 || matrixPtr[row][col] > 9)) {
                 cout << "Error! Enter an integer between 0 and 9: ";
-                cin.clear();
-                cin.ignore();
+                cin.clear();                // clear error flag in cin
+                cin.ignore(100);               // ignore user input
                 cin >> matrixPtr[row][col];
             }
         }

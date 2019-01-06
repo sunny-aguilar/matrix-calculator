@@ -1,9 +1,9 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
-** Description:     Write a short description
-**                  of your code
-**                  here.
+** Description:     This program creates a matrix calculator program.
+**                  It has two main functions and a 3rd function for
+**                  validating user data.
 **
 *********************************************************************/
 #include "readMatrix.hpp"
@@ -15,7 +15,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-int validateSize();                     // validates menu choice
+int validateSize();                             // validator prototype
 
 int main() {
     int size = 0;                               // holds matrix size
@@ -45,7 +45,7 @@ int main() {
         cout << endl;
     }
     // display the determinant value
-    cout << "\nDeterminant is: " << determinant(ptrMatrix, size) << endl;
+    cout << "\n||| Determinant is: " << determinant(ptrMatrix, size) << endl;
 
     // delete dynamically allocated pointers
     for (int arr = 0; arr < size; arr++) {
