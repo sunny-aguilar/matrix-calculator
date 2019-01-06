@@ -9,8 +9,10 @@
 #include "readMatrix.hpp"
 #include "determinant.hpp"
 #include <iostream>
+#include <string>
 #include <sstream>
 #include <cstring>
+#include <cctype>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -66,61 +68,23 @@ int main() {
 **                  back to main.
 *********************************************************************/
 int validateSize() {
-    char choice[100];                   // holds user input
     int validInput = 0;                 // holds validated input
-    bool isDigit = false;               // checks if value is a digit
-    bool tooLong = false;               // checks the # of characters
-    bool notInRange = false;            // t/f if number is in range
-    const int MIN_VAL = 2;              // min range of value acceptable
-    const int MAX_VAL = 3;              // max range of value acceptable
-    std::stringstream convert;          // convert char to number value
 
-    do {    // ask a user to enter valid input
-        // get user input
-        cin.getline(choice, 100);
+        std::string userInput;
+        cout << "\nEnter a Number: ";
+        cin >> userInput;
 
-        // reject any input that has more than one character
-        if (strlen(choice) > 1) {
-            tooLong = true;
-            cout << "Enter only one number\n";
-            cout << "Length is " << strlen(choice) << endl;
-        }
-        else {
-            tooLong = false;
+        // validate input
+        while(!cin || (userInput != "2" && userInput != "3") || (userInput.length() > 1) ) {
+            cout << "Error! Enter an integer between 2 and 3: ";
+            cin.clear();                // clear error flag in cin
+            cin.ignore();               // ignore user input
+            cin >> userInput;           // get new user input
         }
 
-        // reject any input which is not a digit
-        for (int i = 0; i < strlen(choice); i++) {
-            if ( isdigit(choice[i]) ) {
-                isDigit = true;
-            }
-            else if ( !isdigit(choice[i]) ) {
-                isDigit = false;
-            }
-        }
-        if (!isDigit) {
-            cout << "you must enter a number\n";
-        }
-
-        // if input is a number and has digits within range
-        if (!tooLong && isDigit) {
-            convert.clear();
-            convert << choice;
-            convert >>  validInput;
-
-            // reject any input which is not equal to valid menu options
-            if (validInput < MIN_VAL  || validInput > MAX_VAL) {
-                notInRange = true;
-                cout << "you must enter 2 or 3\n";
-            }
-            else if (validInput >= MIN_VAL && validInput <= MAX_VAL) {
-                notInRange = false;
-            }
-        }
-
-        // keep looping until correct input
-    } while (tooLong || !isDigit || notInRange);
-
+    // convert string to int
+    validInput = stoi(userInput);
+        
     // return the valid data back to main()
     return validInput;
 }
