@@ -12,6 +12,8 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+void validateMatrixInput(int **matrixPtr, int size);
+
 void readMatrix(int **matrixPtr, int size) {
 
     for(int i = 0; i < size; ++i) {
@@ -19,20 +21,25 @@ void readMatrix(int **matrixPtr, int size) {
         matrixPtr[i] = new int[size];
     }
 
-        // ask user to enter integers for matrix
-        cout << "Now, enter 4 integers sizes 0 - 9.\n";
-        for(int row = 0; row < size; ++row) {
-            for(int col = 0; col < size; ++col) {
-                cout << "\nEnter a Number: ";
-                cin >> matrixPtr[row][col];
+    // ask user to enter integers for matrix & validate
+    validateMatrixInput(matrixPtr, size);
+}
 
-                // validate input
-                while(!cin || (matrixPtr[row][col] < -9 || matrixPtr[row][col] > 9)) {
-                    cout << "Error! Enter an integer between 0 and 9: ";
-                    cin.clear();                // clear error flag in cin
-                    cin.ignore();               // ignore user input
-                    cin >> matrixPtr[row][col];
-                }
+void validateMatrixInput(int **matrixPtr, int size) {
+    // ask user to enter integers for matrix
+    cout << "Now, enter 4 integers sizes 0 - 9.\n";
+    for(int row = 0; row < size; ++row) {
+        for(int col = 0; col < size; ++col) {
+            cout << "\nEnter a Number: ";
+            cin >> matrixPtr[row][col];
+
+            // validate input
+            while(!cin || (matrixPtr[row][col] < -9 || matrixPtr[row][col] > 9)) {
+                cout << "Error! Enter an integer between 0 and 9: ";
+                cin.clear();                // clear error flag in cin
+                cin.ignore();               // ignore user input
+                cin >> matrixPtr[row][col];
             }
         }
+    }
 }

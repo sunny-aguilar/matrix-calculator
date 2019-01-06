@@ -84,7 +84,7 @@ int validateSize() {
 
     // convert string to int
     validInput = stoi(userInput);
-        
+
     // return the valid data back to main()
     return validInput;
 }
