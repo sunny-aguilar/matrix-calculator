@@ -28,7 +28,7 @@ clean:
 	rm calc *.o
 
 debug:
-	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./Ant
+	valgrind -v --leak-check=full --show-leak-kinds=all --track-origins=yes ./calc
 
 zip :
-	zip -D matrix-calculator.zip $(CPPs) $(HPPs) $(TXTS) makefile *.txt *.pdf
+	zip -D Lab1_Aguilar_Sandro.zip $(CPPs) $(HPPs) $(TXTS) makefile
