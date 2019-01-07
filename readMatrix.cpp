@@ -2,9 +2,8 @@
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
 ** Description:     A function that take a pointer to a 2-D array and
-**                  an int as parameters. The function promps the user
+**                  an int as parameters. The function prompts the user
 **                  to enter the values for a size 2 or size 3 matrix.
-**
 *********************************************************************/
 #include "readMatrix.hpp"
 #include <iostream>
@@ -25,6 +24,14 @@ void readMatrix(int **matrixPtr, int size) {
     validateMatrixInput(matrixPtr, size);
 }
 
+/*********************************************************************
+** Author:          Sandro Aguilar
+** Date:            Jan 2019
+** Description:     A helper function that validates the data going
+**                  into the 2D array. It takes a pointer to a pointer
+**                  and a size value which are used to iterate through
+**                 and store integers. No return value.
+*********************************************************************/
 void validateMatrixInput(int **matrixPtr, int size) {
     // ask user to enter integers for matrix
     cout << "Now, enter 4 integers sizes 0 - 9.\n";
