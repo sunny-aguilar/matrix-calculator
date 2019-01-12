@@ -2,12 +2,12 @@
 ** Author:          Sandro Aguilar
 ** Date:            Jan 2019
 ** Description:     This program creates a matrix calculator program.
-**                  It has two main functions and a 3rd function for
-**                  validating user data.
+**                  It has two main functions and two input functions
+**                  for validating user data.
 **
 *********************************************************************/
-#include "readMatrix.hpp"
-#include "determinant.hpp"
+#include "readMatrix.hpp"                       // header file
+#include "determinant.hpp"                      // hder file
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -27,16 +27,17 @@ int main() {
     cout << "Enter 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
          << "3. Matrix of size 3 x 3" << endl
-         << "\nEnter: ";
 
-    // call function to validate size entered by user
+    // call function to get and validate size entered by user
     size = validateSize();
     // confirm size with user after validation passes
     cout << "\nYou have chosen a matrix of size " << size << endl;
 
     // create an array of pointers that point to arrays
     ptrMatrix = new int*[size];         // allocate pointer to array
-    readMatrix(ptrMatrix, size);        // send pointer to readMatrix function
+
+    // send pointer to readMatrix function
+    readMatrix(ptrMatrix, size);
 
     // display matrix values
     cout << "\nMatrix Numbers\n";
@@ -70,17 +71,17 @@ int main() {
 int validateSize() {
     int validInput = 0;                 // holds validated input
 
-        std::string userInput;
-        cout << "\nEnter a Number: ";
-        cin >> userInput;
+    std::string userInput;
+    cout << "\nEnter a Number: ";
+    cin >> userInput;
 
-        // validate input
-        while(!cin || (userInput != "2" && userInput != "3") || (userInput.length() > 1) ) {
-            cout << "Error! Enter an integer between 2 and 3: ";
-            cin.clear();                // clear error flag in cin
-            cin.ignore();               // ignore user input
-            cin >> userInput;           // get new user input
-        }
+    // validate input
+    while(!cin || (userInput != "2" && userInput != "3") || (userInput.length() > 1) ) {
+        cout << "Error! Enter an integer between 2 and 3: ";
+        cin.clear();                // clear error flag in cin
+        cin.ignore();               // ignore user input
+        cin >> userInput;           // get new user input
+    }
 
     // convert string to int
     validInput = stoi(userInput);

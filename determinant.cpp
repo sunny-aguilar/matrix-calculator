@@ -6,14 +6,12 @@
 **                  calculated value.
 *********************************************************************/
 #include "determinant.hpp"
-#include <iostream>
-using std::cout;
-using std::endl;
 
 int determinant(int **matrixPtr, int size) {
     // variables to hold user entered values
     int determinant = 0, a, b, c, d, e, f, g, h, i;
 
+    // calcualte values on 2 x 2 grid
     if (size == 2) {
         // formula values from array
         a = matrixPtr[0][0];
@@ -25,6 +23,7 @@ int determinant(int **matrixPtr, int size) {
         // |A| = ad - bc
         determinant = (a*d) - (b*c);
     }
+    // calculate determinant on a 3 x 3 grid
     else if (size == 3) {
         // formula values from array
         a = matrixPtr[0][0];
@@ -44,5 +43,6 @@ int determinant(int **matrixPtr, int size) {
                       c*((d*h) - (e*g));
     }
 
+    // return determinant value
     return determinant;
 }

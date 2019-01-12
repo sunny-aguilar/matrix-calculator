@@ -6,13 +6,19 @@
 **                  to enter the values for a size 2 or size 3 matrix.
 *********************************************************************/
 #include "readMatrix.hpp"
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
 
+/*********************************************************************
+** Description:     validator function prototype
+*********************************************************************/
 void validateMatrixInput(int **matrixPtr, int size);
 
+/*********************************************************************
+** Description:     function receives two parameters: a pointer to a
+**                  pointer and the size of the matrix chosen. It
+**                  allocates the column of a 2D pointer and prompts
+**                  user to enter integer values. Values received are
+**                  validated by function validateMatrixInput().
+*********************************************************************/
 void readMatrix(int **matrixPtr, int size) {
 
     for(int i = 0; i < size; ++i) {
@@ -25,16 +31,16 @@ void readMatrix(int **matrixPtr, int size) {
 }
 
 /*********************************************************************
-** Author:          Sandro Aguilar
-** Date:            Jan 2019
 ** Description:     A helper function that validates the data going
 **                  into the 2D array. It takes a pointer to a pointer
 **                  and a size value which are used to iterate through
-**                 and store integers. No return value.
+**                  and store integers. No return value.
 *********************************************************************/
 void validateMatrixInput(int **matrixPtr, int size) {
     // ask user to enter integers for matrix
     cout << "Now, enter 4 integers sizes 0 - 9.\n";
+
+    // loop though the 2D array
     for(int row = 0; row < size; ++row) {
         for(int col = 0; col < size; ++col) {
             cout << "\nEnter a Number: ";
@@ -45,7 +51,7 @@ void validateMatrixInput(int **matrixPtr, int size) {
                 cout << "Error! Enter an integer between 0 and 9: ";
                 cin.clear();                // clear error flag in cin
                 cin.ignore();               // ignore user input
-                cin >> matrixPtr[row][col];
+                cin >> matrixPtr[row][col]; // read in new input
             }
         }
     }
