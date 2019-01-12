@@ -7,7 +7,7 @@
 **
 *********************************************************************/
 #include "readMatrix.hpp"                       // header file
-#include "determinant.hpp"                      // hder file
+#include "determinant.hpp"                      // header file
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -26,7 +26,7 @@ int main() {
     // ask user to pick a matrix size
     cout << "Enter 2 or 3 to choose the size of the matrix:" << endl
          << "2. Matrix of size 2 x 2" << endl
-         << "3. Matrix of size 3 x 3" << endl
+         << "3. Matrix of size 3 x 3" << endl;
 
     // call function to get and validate size entered by user
     size = validateSize();
