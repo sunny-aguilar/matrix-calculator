@@ -10,6 +10,8 @@ CXXFLAGS = -Wall
 CXXFLAGS += -g
 CXXFLAGS += -std=c++0x
 OBJECTS = main.o readMatrix.o determinant.o
+CPPs = main.cpp readMatrix.cpp determinant.cpp
+HPPs = readMatrix.hpp determinant.hpp
 
 # Targets needed to bring the executable up to date
 
