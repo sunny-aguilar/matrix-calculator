@@ -15,9 +15,8 @@ void validateMatrixInput(int **matrixPtr, int size);
 /*********************************************************************
 ** Description:     function receives two parameters: a pointer to a
 **                  pointer and the size of the matrix chosen. It
-**                  allocates the column of a 2D pointer and prompts
-**                  user to enter integer values. Values received are
-**                  validated by function validateMatrixInput().
+**                  uses the parameter values to call a funciton that
+**                  validates the data entered for the matrix values.
 *********************************************************************/
 void readMatrix(int **matrixPtr, int size) {
     // ask user to enter integers for matrix & validate
@@ -42,7 +41,6 @@ void validateMatrixInput(int **matrixPtr, int size) {
         default:
             cout << "unable to determine integers to enter\n";
     }
-//    cout << "Now, enter 9 integers between 0 - 9.\n";
 
     // loop though the 2D array
     for(int row = 0; row < size; ++row) {
