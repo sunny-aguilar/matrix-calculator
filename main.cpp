@@ -35,11 +35,15 @@ int main() {
 
     // create an array of pointers that point to arrays
     ptrMatrix = new int*[size];         // allocate pointer to array
+    for(int i = 0; i < size; ++i) {
+        // allocate arrays based on size value
+        ptrMatrix[i] = new int[size];
+    }
 
-    // send pointer to readMatrix function
+    // send pointer and size to readMatrix function
     readMatrix(ptrMatrix, size);
 
-    // display matrix values
+    // display matrix values graph
     cout << "\nMatrix Numbers\n";
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
@@ -47,6 +51,7 @@ int main() {
         }
         cout << endl;
     }
+
     // display the determinant value
     cout << "\n|| Determinant is: " << determinant(ptrMatrix, size) << endl;
 

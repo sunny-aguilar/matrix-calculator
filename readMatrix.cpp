@@ -20,12 +20,6 @@ void validateMatrixInput(int **matrixPtr, int size);
 **                  validated by function validateMatrixInput().
 *********************************************************************/
 void readMatrix(int **matrixPtr, int size) {
-
-    for(int i = 0; i < size; ++i) {
-        // allocate arrays based on size value
-        matrixPtr[i] = new int[size];
-    }
-
     // ask user to enter integers for matrix & validate
     validateMatrixInput(matrixPtr, size);
 }
@@ -38,7 +32,17 @@ void readMatrix(int **matrixPtr, int size) {
 *********************************************************************/
 void validateMatrixInput(int **matrixPtr, int size) {
     // ask user to enter integers for matrix
-    cout << "Now, enter 4 integers sizes 0 - 9.\n";
+    switch(size) {
+        case 2:
+            cout << "Now, enter 4 integers between 0 - 9.\n";
+            break;
+        case 3:
+            cout << "Now, enter 9 integers between 0 - 9.\n";
+            break;
+        default:
+            cout << "unable to determine integers to enter\n";
+    }
+//    cout << "Now, enter 9 integers between 0 - 9.\n";
 
     // loop though the 2D array
     for(int row = 0; row < size; ++row) {
