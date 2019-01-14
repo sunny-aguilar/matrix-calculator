@@ -4,6 +4,8 @@
 ** Description:     A function that take a pointer to a 2-D array and
 **                  an int as parameters. The function prompts the user
 **                  to enter the values for a size 2 or size 3 matrix.
+**                  A helper function is also included to validate
+**                  values entered for the matrix calculator.
 *********************************************************************/
 #include "readMatrix.hpp"
 
